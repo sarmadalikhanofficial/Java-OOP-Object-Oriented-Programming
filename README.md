@@ -3,11 +3,11 @@
 ## Java & Eclipse Installation Guide
 
 ## Step 1: Install Java JDK
-Download & install Java JDK from the link below:
+Download & install Java JDK from the link:
 🔗 [Java JDK 23](https://download.oracle.com/java/23/latest/jdk-23_windows-x64_bin.exe)
 
 ## Step 2: Install Java JRE
-Get Java JRE from the link below:
+Get Java JRE from the link:
 🔗 [Java JRE](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=251656_7ed26d28139143f38c58992680c214a5)
 
 ## Step 3: Install Eclipse Neon
@@ -18,5 +18,5 @@ Download Eclipse Neon from the link below:
 - In **Eclipse IDE**, your **project name** and **package name** must be the same.
 - If you are copying code from **GitHub**, ensure that the **class name** matches exactly.
 
-Follow these steps carefully to avoid any issues during setup. 🚀
+Follow these steps carefully to avoid any issues. 🚀
 
