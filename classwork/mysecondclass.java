@@ -1,5 +1,3 @@
-package mysecondclass;
-
 import java.util.Scanner;
 
 public class mysecondclass {
