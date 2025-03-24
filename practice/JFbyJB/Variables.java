@@ -10,7 +10,7 @@ class Answer {
 
 }
 
-class Main{
+class Variables{
     public static void main(String[] args){
         String season = "winter";
         int numberOfCups = 4;
