@@ -1,3 +1,9 @@
+// Example 1: Patient Data using Inheritance
+// Scenario:
+// We have a Person base class.
+
+// Patient class inherits from Person.
+
 package examprep;
 
 // Base class
