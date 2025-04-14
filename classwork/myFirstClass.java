@@ -1,10 +1,11 @@
 import java.util.Scanner;
+
 public class myFirstClass {
 	
 	public static void main(String[] args){
-		Scanner input = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter your age: ");
-		int age = input.nextInt();
+		int age = scanner.nextInt();
 		System.out.println("Your age is: "+age);
 	}
 }
