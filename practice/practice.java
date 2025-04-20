@@ -1,35 +1,36 @@
-// Parent class
-class Shape {
-    public void draw() {
-        System.out.println("Drawing a shape");
+// BankAccount class using encapsulation
+public class BankAccount {
+    // Private variable (can't be accessed directly from outside the class)
+    private double balance;
+
+    // Public method to deposit money (only if amount > 0)
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    // Public method to withdraw money (only if amount <= balance)
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    // Getter method to check current balance
+    public double getBalance() {
+        return balance;
     }
 }
 
-// Child class 1
-class Circle extends Shape {
-    @Override
-    public void draw() {
-        System.out.println("Drawing a circle");
-    }
-}
-
-// Child class 2
-class Square extends Shape {
-    @Override
-    public void draw() {
-        System.out.println("Drawing a square");
-    }
-}
-
-// Main class
-public class PolymorphismExample {
+// Main class to test BankAccount
+class EncapsulationExample {
     public static void main(String[] args) {
-        Shape myShape;         // reference of parent class
+        BankAccount myAccount = new BankAccount();
 
-        myShape = new Circle();  // object of Circle
-        myShape.draw();          // Output: Drawing a circle
+        myAccount.deposit(1000);   // Deposit 1000
+        myAccount.withdraw(300);   // Withdraw 300
 
-        myShape = new Square();  // object of Square
-        myShape.draw();          // Output: Drawing a square
+        System.out.println("Current Balance: " + myAccount.getBalance()); // Output: 700.0
     }
 }
