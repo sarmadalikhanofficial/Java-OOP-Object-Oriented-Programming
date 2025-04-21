@@ -1,36 +1,32 @@
-// BankAccount class using encapsulation
-public class BankAccount {
-    // Private variable (can't be accessed directly from outside the class)
-    private double balance;
+// Abstract class
+abstract class Animal {
+    // Abstract method (no body — must be overridden)
+    public abstract void makeSound();
 
-    // Public method to deposit money (only if amount > 0)
-    public void deposit(double amount) {
-        if (amount > 0) {
-            balance += amount;
-        }
-    }
-
-    // Public method to withdraw money (only if amount <= balance)
-    public void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
-            balance -= amount;
-        }
-    }
-
-    // Getter method to check current balance
-    public double getBalance() {
-        return balance;
+    // Normal method (has body)
+    public void sleep() {
+        System.out.println("The animal is sleeping");
     }
 }
 
-// Main class to test BankAccount
-class EncapsulationExample {
+// Subclass of Animal
+class Dog extends Animal {
+    // Implementing the abstract method
+    @Override
+    public void makeSound() {
+        System.out.println("The dog barks");
+    }
+}
+
+// Main class with main method
+public class Abstraction {
     public static void main(String[] args) {
-        BankAccount myAccount = new BankAccount();
+        // We can't create Animal directly because it's abstract
+        // Animal a = new Animal(); ❌ Error
 
-        myAccount.deposit(1000);   // Deposit 1000
-        myAccount.withdraw(300);   // Withdraw 300
-
-        System.out.println("Current Balance: " + myAccount.getBalance()); // Output: 700.0
+        // Create an object of Dog, but refer to it as an Animal (Polymorphism)
+        Animal myDog = new Dog();
+        myDog.makeSound();  // Output: The dog barks
+        myDog.sleep();      // Output: The animal is sleeping
     }
 }
