@@ -32,12 +32,16 @@ Ensure you have the following installed:
 
 ## 📂 Directory Structure
 ```
-Java-OOP/
-│-- Lab_Manual/     # Lab exercises and solutions
+Java-OOP-Object-Oriented-Programming/
+│-- .vscode/ # VS Code workspace settings
+│-- Lab Manual Solutions/ # Final Lab Manual Solutions
+│-- Lab_Manual/     # Initial lab manual files
 │-- classwork/      # Programs from lectures
 │-- assignments/    # Submitted assignment codes
+│-- examprep/ # Programs for exam preparation
 │-- practice/       # Additional practice problems
 │-- README.md       # Project documentation
+│-- .gitignore # Git ignore rules
 ```
 
 ## ⚡ How to Contribute
