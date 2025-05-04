@@ -1,0 +1,7 @@
+Name: Sarmad
+Email: sarmad@gmail.com
+Phone: +923122240334
+Street: abc
+City: khi
+ZIP: 75050
+Username: admin
