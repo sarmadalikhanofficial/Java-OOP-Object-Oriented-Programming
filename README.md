@@ -11,7 +11,9 @@ This repository contains **Java OOP (Object-Oriented Programming)** concepts, in
 ### Prerequisites
 Ensure you have the following installed:
 - **Java Development Kit (JDK)** (version 8 or above recommended)
+- **Java Runtime Environment (JRE)**
 - **IDE (Eclipse, IntelliJ IDEA, or VS Code)**
+- **JavaFX SDK**
 - **Git (for cloning this repository)**
 
 ### Installation
