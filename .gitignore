@@ -1,10 +1,11 @@
 # Ignore all .class files (compiled Java bytecode)
 *.class
 
+*.docx
 
-"Lab Manual Solutions"/
+# "Lab Manual Solutions"/
 
-Lab Manual Solutions/
+# Lab Manual Solutions/
 
 
 "hidden"/
@@ -14,3 +15,6 @@ hidden/
 
 "University"/
 University/
+
+OOP_Lab_Manual.docx
+Lab Manual Solutions/OOP_Lab_Manual.docx
