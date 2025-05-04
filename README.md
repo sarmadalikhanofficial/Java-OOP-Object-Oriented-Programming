@@ -64,9 +64,39 @@ Get Java JRE from the link:
 Download Eclipse Neon from the link below:
 🔗 [Eclipse Neon](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/3/eclipse-java-neon-3-win32-x86_64.zip)
 
+## 🎨 JavaFX Setup & Execution Guide
+
+To run JavaFX-based programs, follow these steps:
+
+### 🔽 Step 1: Download JavaFX SDK
+
+Download the JavaFX SDK from the official site:
+
+🔗 [Download JavaFX SDK](https://gluonhq.com/products/javafx/)
+
+> 💡 **Important:** After downloading, extract the JavaFX SDK to the following location on your system:  
+> `C:\javafx-sdk-24.0.1\`
+
+### ⚙️ Step 2: Compile JavaFX Programs
+
+Use the following command to compile a JavaFX `.java` file via terminal:
+
+```bash
+javac --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml filedirectory\fileName.java
+
+```
+### ⚙️ Step 3: Run JavaFX Program
+
+Use the following command to run your compiled JavaFX `.class`:
+```bash
+java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml fileName
+```
+
 ## Important Notes
 - In **Eclipse IDE**, your **project name** and **package name** must be the same.
 - If you are copying code from **GitHub**, ensure that the **class name** matches exactly.
+- Make sure you're in the correct **working directory** (i.e., the one containing Lab Manual Solutions) in the terminal.
+- If your file uses packages, use dot . notation (e.g., package.name.ClassName) when running.
 
 Follow these steps carefully to avoid any issues. 🚀
 
