@@ -11,18 +11,18 @@ you cannot create an object of an abstract class. instead, you use child classes
 
 public class Abstraction {
 
-    // Abstract class representing a Shape
+    // abstract class representing a Shape
     abstract static class Shape {
-        // Abstract method to calculate area
+        // abstract method to calculate area
         public abstract double calculateArea();
 
-        // Concrete method to display information
+        // concrete method to display information
         public void display() {
             System.out.println("This is a shape.");
         }
     }
 
-    // Concrete class representing a Circle
+    // concrete class representing a Circle
     static class Circle extends Shape {
         private double radius;
 
@@ -41,7 +41,7 @@ public class Abstraction {
         }
     }
 
-    // Concrete class representing a Rectangle
+    // concrete class representing a Rectangle
     static class Rectangle extends Shape {
         private double length;
         private double width;
@@ -75,3 +75,5 @@ public class Abstraction {
         System.out.println("Area of the rectangle: " + rectangle.calculateArea());
     }
 }
+
+

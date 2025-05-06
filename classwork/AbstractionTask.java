@@ -4,16 +4,16 @@ abstract class Shape {
     abstract public void edges();
 }
 
-// child class implementing the abstract method
+// child class implementing the abstract method for Triangle
 class Triangle extends Shape {
-    
+    @Override
     public void edges() {
         int corner = 3;
         System.out.println("triangle has " + corner + " corners");
     }
 }
 
-// another child class
+// child class implementing the abstract method for Circle
 class Circle extends Shape {
     @Override
     public void edges() {
@@ -22,8 +22,7 @@ class Circle extends Shape {
     }
 }
 
-
-// another child class
+// child class implementing the abstract method for Pentagon
 class Pentagon extends Shape {
     @Override
     public void edges() {
@@ -32,12 +31,39 @@ class Pentagon extends Shape {
     }
 }
 
-// another child class
+// child class implementing the abstract method for Square
 class Square extends Shape {
     @Override
     public void edges() {
         int corner = 4;
         System.out.println("square has " + corner + " corners");
+    }
+}
+
+// final child class for Hexagon (cannot be subclassed)
+final class Hexagon extends Shape {
+    @Override
+    public void edges() {
+        int corner = 6;
+        System.out.println("hexagon has " + corner + " corners");
+    }
+}
+
+// final child class for Heptagon (cannot be subclassed)
+final class Heptagon extends Shape {
+    @Override
+    public void edges() {
+        int corner = 7;
+        System.out.println("heptagon has " + corner + " corners");
+    }
+}
+
+// final child class for Octagon (cannot be subclassed)
+final class Octagon extends Shape {
+    @Override
+    public void edges() {
+        int corner = 8;
+        System.out.println("octagon has " + corner + " corners");
     }
 }
 
@@ -50,15 +76,26 @@ public class AbstractionTask {
 
         // object of circle
         Shape circle = new Circle();
-        circle.edges(); 
+        circle.edges(); // output: circle has 0 corners
 
-        
         // object of pentagon
         Shape pentagon = new Pentagon();
-        pentagon.edges(); 
-        
+        pentagon.edges(); // output: pentagon has 5 corners
+
         // object of square
         Shape square = new Square();
-        square.edges(); 
+        square.edges(); // output: square has 4 corners
+
+        // object of hexagon
+        Shape hexagon = new Hexagon();
+        hexagon.edges(); // output: hexagon has 6 corners
+
+        // object of heptagon
+        Shape heptagon = new Heptagon();
+        heptagon.edges(); // output: heptagon has 7 corners
+
+        // object of octagon
+        Shape octagon = new Octagon();
+        octagon.edges(); // output: octagon has 8 corners
     }
 }
