@@ -1,3 +1,14 @@
+/* 
+abstract class means a class that cannot be used to create objects directly. it is only meant to be inherited by child classes.
+an abstract class may contain:
+abstract methods (methods without a body)
+non-abstract methods (methods with a body)
+variables
+abstract methods are like rules or instructions that the child classes must follow and implement.
+if a class has at least one abstract method, it must be declared as abstract.
+you cannot create an object of an abstract class. instead, you use child classes that extend it and provide complete implementation.
+*/
+
 public class Abstraction {
 
     // Abstract class representing a Shape

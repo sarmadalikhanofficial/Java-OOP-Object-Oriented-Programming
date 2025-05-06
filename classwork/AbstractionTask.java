@@ -1,58 +1,64 @@
-// Abstract class
+// abstract class
 abstract class Shape {
-    int edges; // common variable for number of edges
-
-    // Abstract method (must be implemented by subclasses)
-    public abstract void printEdges();
+    // abstract method
+    abstract public void edges();
 }
 
-// Subclass 1: Square
-class Square extends Shape {
-    Square() {
-        edges = 4;
-    }
-
-    @Override
-    public void printEdges() {
-        System.out.println("Square has " + edges + " edges.");
-    }
-}
-
-// Subclass 2: Triangle
+// child class implementing the abstract method
 class Triangle extends Shape {
-    Triangle() {
-        edges = 3;
-    }
-
-    @Override
-    public void printEdges() {
-        System.out.println("Triangle has " + edges + " edges.");
+    
+    public void edges() {
+        int corner = 3;
+        System.out.println("triangle has " + corner + " corners");
     }
 }
 
-// Subclass 3: Pentagon
+// another child class
+class Circle extends Shape {
+    @Override
+    public void edges() {
+        int corner = 0;
+        System.out.println("circle has " + corner + " corners");
+    }
+}
+
+
+// another child class
 class Pentagon extends Shape {
-    Pentagon() {
-        edges = 5;
-    }
-
     @Override
-    public void printEdges() {
-        System.out.println("Pentagon has " + edges + " edges.");
+    public void edges() {
+        int corner = 5;
+        System.out.println("pentagon has " + corner + " corners");
     }
 }
 
-// Main class
+// another child class
+class Square extends Shape {
+    @Override
+    public void edges() {
+        int corner = 4;
+        System.out.println("square has " + corner + " corners");
+    }
+}
+
+// main class to perform abstraction
 public class AbstractionTask {
     public static void main(String[] args) {
-        // Create objects
-        Shape s1 = new Square();
-        Shape s2 = new Triangle();
-        Shape s3 = new Pentagon();
+        // object of triangle
+        Shape triangle = new Triangle();
+        triangle.edges(); // output: triangle has 3 corners
 
-        // Call method for all shapes
-        s1.printEdges();
-        s2.printEdges();
-        s3.printEdges();
+        // object of circle
+        Shape circle = new Circle();
+        circle.edges(); 
+
+        
+        // object of pentagon
+        Shape pentagon = new Pentagon();
+        pentagon.edges(); 
+        
+        // object of square
+        Shape square = new Square();
+        square.edges(); 
     }
 }
