@@ -83,7 +83,7 @@ Download the JavaFX SDK from the official site:
 > 💡 **Important:** After downloading, extract the JavaFX SDK to the following location on your system:  
 > `C:\javafx-sdk-24.0.1\`
 
-### ⚙️ Step 2: Compile JavaFX Programs
+### ⚙️ Step 2: Compile JavaFX Programs from Terminal
 
 Use the following command to compile a JavaFX `.java` file via terminal:
 
@@ -91,12 +91,99 @@ Use the following command to compile a JavaFX `.java` file via terminal:
 javac --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml filedirectory\fileName.java
 
 ```
-### ⚙️ Step 3: Run JavaFX Program
+### ⚙️ Step 3: Run JavaFX Program from Terminal
 
 Use the following command to run your compiled JavaFX `.class`:
 ```bash
 java --module-path "C:\javafx-sdk-24.0.1\lib" --add-modules javafx.controls,javafx.fxml fileName
 ```
+
+# JavaFX Setup in Eclipse - Complete Guide
+
+## Step 2: Configure Eclipse for JavaFX
+1. Open Eclipse
+2. Go to Window → Preferences
+3. Navigate to Java → Build Path → User Libraries
+4. Click the "New" button
+5. Enter a name like "JavaFX" and click "OK"
+6. Select the newly created "JavaFX" library in the list
+7. Click "Add External JARs"
+8. Navigate to your JavaFX SDK lib folder (e.g., C:\javafx-sdk-24.0.1\lib)
+9. Select all JAR files:
+   - javafx.base.jar
+   - javafx.controls.jar
+   - javafx.fxml.jar
+   - javafx.graphics.jar
+   - javafx.media.jar
+   - javafx.swing.jar
+   - javafx.web.jar
+10. Click "Open" to add the JARs
+  
+### For New Project:
+1. File → New → Java Project
+2. Give your project a name
+3. Right-click on the project → Properties
+4. Go to Java Build Path → Libraries
+5. Click "Add Library" → User Library → JavaFX → Finish
+6. Click "Apply" and "Close"
+
+### For Existing Project:
+1. Right-click on your existing project
+2. Select Properties
+3. Go to Java Build Path → Libraries
+4. Click "Add Library" → User Library → JavaFX → Finish
+5. Click "Apply" and "Close"
+
+## Step 5: Create a Sample JavaFX Program
+```java
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+ 
+public class JAVAFX extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
+    
+    @Override
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("Hello World!");
+        Button btn = new Button();
+        btn.setText("Say 'Hello World'");
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+ 
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hello World!");
+            }
+        });
+        
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.show();
+    }
+}
+```
+
+## Troubleshooting Common Issues
+1. If "Add External JARs" is grayed out:
+   - Make sure you've created the User Library first
+   - Select the library in the list before trying to add JARs
+
+2. If you see red errors:
+   - Verify all JAR files are properly added
+   - Make sure you're using Java 11 or later
+   - Clean and rebuild your project
+
+3. If the program doesn't run:
+   - Verify all required modules are added
+   - Make sure your main class extends Application
+
 
 ## Important Notes
 - In **Eclipse IDE**, your **project name** and **package name** must be the same.
