@@ -486,10 +486,3 @@ Yeh JavaFX app ko launch karta hai.
 ### 25. **How does the application handle API errors or no response?**
 **A:** Agar API se response na aaye ya error ho, to catch block mein user ko error message show hota hai.
 
----
-
-Yeh Q&A list aapko har technical angle se cover kar degi. Agar kisi aur specific topic pe aur detail chahiye ho, ya aur bhi tough questions chahiyein, to bataen!
-
-
-
-
