@@ -1,18 +1,144 @@
 ### 1. **Package aur Imports**
-- `package com.example;`  
-  Yeh batata hai ke yeh file kis package mein hai.
-- `import ...`  
-  Yeh sab JavaFX aur HTTP request, JSON parsing ke liye libraries import kar raha hai.
+
+### 1. `package com.example;`
+- Yeh batata hai ke yeh file kis package (folder structure) mein hai.
 
 ---
 
-### 2. **Class Declaration**
+### 2. `import io.github.cdimascio.dotenv.Dotenv;`
+- **Dotenv**:  
+  Yeh library .env file se environment variables (jaise API key) load karne ke liye use hoti hai.
+
+---
+
+### 3. `import javafx.application.Application;`
+- **Application**:  
+  JavaFX ki base class hai, isko extend karke aap apni GUI app bana sakte hain.
+
+---
+
+### 4. `import javafx.geometry.Insets;`
+- **Insets**:  
+  Layouts mein padding/margin set karne ke liye use hota hai.
+
+---
+
+### 5. `import javafx.geometry.Pos;`
+- **Pos**:  
+  Layouts mein alignment set karne ke liye (center, left, right, etc).
+
+---
+
+### 6. `import javafx.scene.Scene;`
+- **Scene**:  
+  JavaFX ka main container, jismein saari UI hoti hai.
+
+---
+
+### 7. `import javafx.scene.control.*;`
+- **Controls (Button, TextField, Label, etc)**:  
+  Sab UI controls (jaise button, text field, label, etc) import ho jate hain.
+
+---
+
+### 8. `import javafx.scene.layout.*;`
+- **Layouts (VBox, HBox, etc)**:  
+  UI ko arrange karne ke liye layouts (vertical, horizontal, etc) import ho jate hain.
+
+---
+
+### 9. `import javafx.scene.paint.Color;`
+- **Color**:  
+  Rang set karne ke liye (background, text, etc).
+
+---
+
+### 10. `import javafx.scene.text.Font;`
+- **Font**:  
+  Text ka font style set karne ke liye.
+
+---
+
+### 11. `import javafx.scene.text.FontWeight;`
+- **FontWeight**:  
+  Text ko bold ya normal weight dene ke liye.
+
+---
+
+### 12. `import javafx.stage.Stage;`
+- **Stage**:  
+  JavaFX ka main window (app ka frame).
+
+---
+
+### 13. `import javafx.scene.image.Image;`
+- **Image**:  
+  Image load karne ke liye (jaise logo).
+
+---
+
+### 14. `import javafx.scene.image.ImageView;`
+- **ImageView**:  
+  Image ko UI mein dikhane ke liye.
+
+---
+
+### 15. `import javafx.scene.text.Text;`
+- **Text**:  
+  Simple text node banane ke liye.
+
+---
+
+### 16. `import javafx.scene.text.TextFlow;`
+- **TextFlow**:  
+  Multiple text nodes ko ek sath arrange karne ke liye.
+
+---
+
+### 17. `import java.net.http.HttpClient;`
+- **HttpClient**:  
+  Internet par request bhejne ke liye (API call).
+
+---
+
+### 18. `import java.net.http.HttpRequest;`
+- **HttpRequest**:  
+  HTTP request banane ke liye (kya bhejna hai, kahan bhejna hai).
+
+---
+
+### 19. `import java.net.http.HttpResponse;`
+- **HttpResponse**:  
+  Server se aane wala response receive karne ke liye.
+
+---
+
+### 20. `import java.net.URI;`
+- **URI**:  
+  URL ko represent karne ke liye (API endpoint).
+
+---
+
+### 21. `import org.json.JSONObject;`
+- **JSONObject**:  
+  JSON data ko parse aur create karne ke liye (API response handle karne ke liye).
+
+---
+
+### 22. `import org.json.JSONArray;`
+- **JSONArray**:  
+  JSON array ko parse aur create karne ke liye.
+
+
+---
+
+## 2. **Class Declaration**
 - `public class SyrexTech extends Application`  
   Yeh class `Application` ko extend kar rahi hai, jo JavaFX ka base class hai GUI apps ke liye.
 
 ---
 
-### 3. **Variables**
+## 3. **Variables**
 - `VBox chatContainer`  
   Yeh ek vertical box hai jismein chat messages show hongay.
 - `ScrollPane chatScrollPane`  
@@ -30,7 +156,7 @@
 
 ---
 
-### 4. **start(Stage primaryStage)**
+## 4. **start(Stage primaryStage)**
 Yeh JavaFX ka main method hai jo app start karta hai.
 
 - **httpClient initialize hota hai.**
@@ -47,7 +173,7 @@ Yeh JavaFX ka main method hai jo app start karta hai.
 
 ---
 
-### 5. **handleUserInput()**
+## 5. **handleUserInput()**
 Yeh method tab call hota hai jab user message bhejta hai.
 
 - User ka input field se text leta hai.
@@ -60,7 +186,7 @@ Yeh method tab call hota hai jab user message bhejta hai.
 
 ---
 
-### 6. **getGeminiResponse(String userInput)**
+## 6. **getGeminiResponse(String userInput)**
 Yeh method Gemini API ko HTTP POST request bhejta hai.
 
 - JSON body banata hai user ke message ke sath.
@@ -70,7 +196,7 @@ Yeh method Gemini API ko HTTP POST request bhejta hai.
 
 ---
 
-### 7. **addMessage(String sender, String message)**
+## 7. **addMessage(String sender, String message)**
 Yeh method chat mein message add karta hai.
 
 - HBox banata hai message ke liye.
@@ -81,7 +207,7 @@ Yeh method chat mein message add karta hai.
 
 ---
 
-### 8. **main(String[] args)**
+## 8. **main(String[] args)**
 Yeh JavaFX app ko launch karta hai.
 
 ---
@@ -229,136 +355,6 @@ Yeh JavaFX app ko launch karta hai.
 
 
 ---
-
-### 1. `package com.example;`
-- Yeh batata hai ke yeh file kis package (folder structure) mein hai.
-
----
-
-### 2. `import io.github.cdimascio.dotenv.Dotenv;`
-- **Dotenv**:  
-  Yeh library .env file se environment variables (jaise API key) load karne ke liye use hoti hai.
-
----
-
-### 3. `import javafx.application.Application;`
-- **Application**:  
-  JavaFX ki base class hai, isko extend karke aap apni GUI app bana sakte hain.
-
----
-
-### 4. `import javafx.geometry.Insets;`
-- **Insets**:  
-  Layouts mein padding/margin set karne ke liye use hota hai.
-
----
-
-### 5. `import javafx.geometry.Pos;`
-- **Pos**:  
-  Layouts mein alignment set karne ke liye (center, left, right, etc).
-
----
-
-### 6. `import javafx.scene.Scene;`
-- **Scene**:  
-  JavaFX ka main container, jismein saari UI hoti hai.
-
----
-
-### 7. `import javafx.scene.control.*;`
-- **Controls (Button, TextField, Label, etc)**:  
-  Sab UI controls (jaise button, text field, label, etc) import ho jate hain.
-
----
-
-### 8. `import javafx.scene.layout.*;`
-- **Layouts (VBox, HBox, etc)**:  
-  UI ko arrange karne ke liye layouts (vertical, horizontal, etc) import ho jate hain.
-
----
-
-### 9. `import javafx.scene.paint.Color;`
-- **Color**:  
-  Rang set karne ke liye (background, text, etc).
-
----
-
-### 10. `import javafx.scene.text.Font;`
-- **Font**:  
-  Text ka font style set karne ke liye.
-
----
-
-### 11. `import javafx.scene.text.FontWeight;`
-- **FontWeight**:  
-  Text ko bold ya normal weight dene ke liye.
-
----
-
-### 12. `import javafx.stage.Stage;`
-- **Stage**:  
-  JavaFX ka main window (app ka frame).
-
----
-
-### 13. `import javafx.scene.image.Image;`
-- **Image**:  
-  Image load karne ke liye (jaise logo).
-
----
-
-### 14. `import javafx.scene.image.ImageView;`
-- **ImageView**:  
-  Image ko UI mein dikhane ke liye.
-
----
-
-### 15. `import javafx.scene.text.Text;`
-- **Text**:  
-  Simple text node banane ke liye.
-
----
-
-### 16. `import javafx.scene.text.TextFlow;`
-- **TextFlow**:  
-  Multiple text nodes ko ek sath arrange karne ke liye.
-
----
-
-### 17. `import java.net.http.HttpClient;`
-- **HttpClient**:  
-  Internet par request bhejne ke liye (API call).
-
----
-
-### 18. `import java.net.http.HttpRequest;`
-- **HttpRequest**:  
-  HTTP request banane ke liye (kya bhejna hai, kahan bhejna hai).
-
----
-
-### 19. `import java.net.http.HttpResponse;`
-- **HttpResponse**:  
-  Server se aane wala response receive karne ke liye.
-
----
-
-### 20. `import java.net.URI;`
-- **URI**:  
-  URL ko represent karne ke liye (API endpoint).
-
----
-
-### 21. `import org.json.JSONObject;`
-- **JSONObject**:  
-  JSON data ko parse aur create karne ke liye (API response handle karne ke liye).
-
----
-
-### 22. `import org.json.JSONArray;`
-- **JSONArray**:  
-  JSON array ko parse aur create karne ke liye.
-
 ---
 
 ## SyrexTech JavaFX Chatbot Viva – Advanced Q&A
