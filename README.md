@@ -195,4 +195,97 @@ Follow these steps carefully to avoid any issues. 🚀
 
 📢 **For any queries, feel free to reach out!** Let's make learning Java OOP easier together! 🚀
 
+# Library Management System - Presentation Slides
+
+## Slide 1: Introduction
+- Title: Library Management System
+- Overview of the project
+- Key features: Book management, Member management, Transaction tracking
+- Built using Java OOP principles
+
+## Slide 2: OOP Pillars Overview
+- Encapsulation: Private fields with public getters/setters
+- Inheritance: Person class as base class for Librarian and Member
+- Polymorphism: Different behaviors for Librarian and Member classes
+- Abstraction: Abstract concepts like Person, Book, and Transaction
+
+## Slide 3: Person Class (Base Class)
+- Base class for all users in the system
+- Implements Encapsulation:
+  - Private fields: id, name, contactInfo
+  - Public getters for accessing data
+- Used as a foundation for Librarian and Member classes
+- Demonstrates Inheritance principle
+
+## Slide 4: Book Class
+- Represents a book in the library
+- Implements Encapsulation:
+  - Private fields: id, title, author, genre, isBorrowed
+  - Public getters and setters
+- Tracks book status (borrowed/available)
+- Core entity in the system
+
+## Slide 5: Transaction Class
+- Records book borrowing and returning
+- Implements Encapsulation:
+  - Private fields: memberId, bookId, borrowDate, returnDate
+  - Public getters for accessing transaction data
+- Maintains history of all book transactions
+- Demonstrates data abstraction
+
+## Slide 6: Librarian Class
+- Extends Person class (Inheritance)
+- Implements Polymorphism:
+  - Specialized methods for library management
+  - Different behavior from Member class
+- Key responsibilities:
+  - Add/remove/update books
+  - Register/remove members
+  - View borrowing history
+
+## Slide 7: Member Class
+- Extends Person class (Inheritance)
+- Implements Polymorphism:
+  - Specialized methods for book borrowing
+  - Different behavior from Librarian class
+- Key features:
+  - Borrow and return books
+  - Track borrowed books
+  - Limited to 5 books at a time
+
+## Slide 8: Library Class
+- Core system class
+- Implements Encapsulation:
+  - Private collections for books, members, transactions
+  - Public methods for system operations
+- Key functionalities:
+  - Book management
+  - Member management
+  - Transaction recording
+  - Search functionality
+
+## Slide 9: Main System Features
+- User Interface:
+  - Separate menus for Librarian and Member
+  - Interactive command-line interface
+- Key Operations:
+  - Book search by title/author/genre
+  - Book borrowing and returning
+  - Member registration and management
+  - Transaction history tracking
+
+## Slide 10: OOP Principles in Action
+- Encapsulation:
+  - All classes use private fields with public accessors
+  - Data hiding and controlled access
+- Inheritance:
+  - Person class as parent for Librarian and Member
+  - Code reuse and hierarchy
+- Polymorphism:
+  - Different behaviors for Librarian and Member
+  - Same interface, different implementations
+- Abstraction:
+  - Abstract concepts like Person, Book, Transaction
+  - Simplified complex system representation
+
 
